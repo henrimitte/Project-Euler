@@ -14,4 +14,8 @@ def sieve_of_eratosthenes(limit = 10000):
         index += 1
     return all_nums
 
-print(sieve_of_eratosthenes())
+def factorial(num):
+    num = abs(num)
+    if num is (0 or 1):
+        return 1
+    return num * factorial(num - 1)
