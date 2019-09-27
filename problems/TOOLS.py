@@ -19,3 +19,16 @@ def factorial(num):
     if num is (0 or 1):
         return 1
     return num * factorial(num - 1)
+
+
+def fib(f1 = 0, f2 = 1):
+    index = 2
+    next = 0
+    while True:
+        index += 1
+        next = f1 + f2
+        f1 = f2
+        f2 = next
+        if len(str(next)) == 1000:
+            return index
+
