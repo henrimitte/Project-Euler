@@ -21,14 +21,18 @@ def factorial(num):
     return num * factorial(num - 1)
 
 
-def fib(f1 = 0, f2 = 1):
+def fib(f1 = 0, f2 = 1, limit = 100):
     index = 2
     next = 0
+    fib_seq = [f1, f2]
     while True:
         index += 1
         next = f1 + f2
+        fib_seq.append(next)
         f1 = f2
         f2 = next
-        if len(str(next)) == 1000:
-            return index
+        if index is limit:
+            return fib_seq
 
+def simple_combination(n, p):
+    return factorial(n) / (factorial(p) * factorial(n - p))
