@@ -1,8 +1,8 @@
 from math import sqrt
 
 def sieve_of_eratosthenes(limit = 10000):
-    max_num_to_check = int(sqrt(limite)) + 1
-    all_numbers = [x for x in range(2, limite, )]
+    max_num_to_check = int(sqrt(limit)) + 1
+    all_numbers = [x for x in range(2, limit)]
     index = 0
     while True:
         number_being_checked = all_numbers[index]
