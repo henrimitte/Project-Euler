@@ -1,18 +1,16 @@
 from math import sqrt
 
 def sieve_of_eratosthenes(limit = 10000):
-    max_num_to_check = int(sqrt(limit)) + 1
-    all_nums = [x for x in range(2, limit)]
+    max_num_to_check = int(sqrt(limite)) + 1
+    all_numbers = [x for x in range(2, limite, )]
     index = 0
     while True:
-        number_being_checked = all_nums[index]
-        if number_being_checked >= max_num_to_check:
-            break
-        for n in all_nums[index + 1:]:
-            if n % number_being_checked == 0:
-                all_nums.remove(n)
+        number_being_checked = all_numbers[index]
+        all_numbers = [x for x in all_numbers if x % number_being_checked != 0 or x == number_being_checked]
         index += 1
-    return all_nums
+        next_prime = all_numbers[index]
+        if next_prime > max_num_to_check:
+            return all_numbers
 
 def factorial(num):
     num = abs(num)
