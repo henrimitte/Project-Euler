@@ -1,4 +1,4 @@
-from tools import sieve_of_eratosthenes as sieve
+from TOOLS import sieve_of_eratosthenes as sieve
 
 limit_of_primes = 65500
 print(f'Generating all prime numbers < {limit_of_primes}')
