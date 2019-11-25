@@ -25,7 +25,7 @@ def sieve_of_eratosthenes(limit = 100):
 
 def factorial(num):
     num = abs(num)
-    if num is (0 or 1):
+    if num in (0, 1):
         return 1
     return num * factorial(num - 1)
 
