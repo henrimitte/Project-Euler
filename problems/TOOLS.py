@@ -1,3 +1,4 @@
+import string
 from math import sqrt
 
 
@@ -41,8 +42,14 @@ def fib(f1 = 0, f2 = 1, limit = 100):
         if index is limit:
             return fib_seq
 
+
 def simple_combination(n, p):
     fact_n = factorial(n)
     fact_p = factorial(p)
     fact_np = factorial(n - p)
     return fact_n / (fact_p * fact_np)
+
+
+def is_one_through_n_pandigital(number_to_check, n = 5):
+    all_nums = string.digits[1:n + 1] # Concatenated string with numbers 1..n
+    return number_to_check == all_nums
