@@ -51,5 +51,6 @@ def simple_combination(n, p):
 
 
 def is_one_through_n_pandigital(number_to_check, n = 5):
+    number_to_check = ''.join(sorted(str(number_to_check)))
     all_nums = string.digits[1:n + 1] # Concatenated string with numbers 1..n
     return number_to_check == all_nums
