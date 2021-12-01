@@ -2,6 +2,19 @@ import string
 from math import sqrt
 
 
+def reverse_int(n: int) -> int:
+    '''
+    Reverse the number and return it.
+
+    :param n: int
+    '''
+    reversed = 0
+    while n > 0:
+        reversed = 10 * reversed + n % 10
+        n //= 10
+    return reversed
+
+
 def get_nth_fibonacci(nth: int) -> int:
     '''
     Return the nth fibonacci number.
