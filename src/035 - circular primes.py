@@ -2,7 +2,7 @@
 There are thirteen such primes below 100: 2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, and 97.
 How many circular primes are there below one million?'''
 
-from TOOLS import sieve_of_eratosthenes
+from tools import sieve_of_eratosthenes
 
 
 def rotate_number(num):
@@ -24,6 +24,7 @@ def rotate_number(num):
 
     return rotated_nums
 
+
 print('Gathering prime numbers below one million...')
 primes_below_one_million = sieve_of_eratosthenes(1000000)
 print('Done!')
@@ -38,7 +39,8 @@ while True:
     rotated = rotate_number(number_being_checked)
     are_all_primes = all([x in primes_below_one_million for x in rotated])
     if not are_all_primes:
-        primes_below_one_million = [x for x in primes_below_one_million if x not in rotated]
+        primes_below_one_million = [
+            x for x in primes_below_one_million if x not in rotated]
     else:
         index += 1
 

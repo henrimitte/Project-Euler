@@ -1,12 +1,14 @@
-from TOOLS import sieve_of_eratosthenes as sieve
+from tools import sieve_of_eratosthenes as sieve
 
 limit_of_primes = 65500
 print(f'Generating all prime numbers < {limit_of_primes}')
 primes = sieve.sieve_of_eratosthenes(limit_of_primes)
 print('Succesfully generated prime numbers!')
 
+
 def generate_triangule_numbers(n_limit):
     return int(0.5 * n_limit * (n_limit + 1))
+
 
 def decompose(num):
     div_exp = []
@@ -23,6 +25,7 @@ def decompose(num):
 
     return div_exp
 
+
 def number_of_divisors(list_of_prime_factors):
     times = {}
     for c in list_of_prime_factors:
@@ -34,6 +37,7 @@ def number_of_divisors(list_of_prime_factors):
         v += 1
         product *= v
     return int(product)
+
 
 cont = 2
 while True:

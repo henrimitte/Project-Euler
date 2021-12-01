@@ -4,7 +4,7 @@ Find the sum of all numbers which are equal to the sum of the factorial of their
 
 Note: as 1! = 1 and 2! = 2 are not sums they are not included.'''
 
-from TOOLS import factorial
+from tools import factorial
 
 
 sum_of_factorials = 0

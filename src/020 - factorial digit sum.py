@@ -1,4 +1,4 @@
-from TOOLS import factorial
+from tools import factorial
 
 n = [int(x) for x in str(factorial(100))]
 soma = 0

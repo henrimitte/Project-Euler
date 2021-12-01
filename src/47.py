@@ -1,4 +1,4 @@
-from TOOLS import sieve_of_eratosthenes
+from tools import sieve_of_eratosthenes
 
 primes = sieve_of_eratosthenes(500000)
 

@@ -1,4 +1,4 @@
-from TOOLS import max_path_sum
+from tools import max_path_sum
 
 triangle = []
 with open('problems\p067_triangle.txt') as arq:

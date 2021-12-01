@@ -1,4 +1,4 @@
-from TOOLS import sieve_of_eratosthenes as sieve
+from tools import sieve_of_eratosthenes as sieve
 
 limit = 10000
 primes = sieve(limit)

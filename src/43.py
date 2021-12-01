@@ -1,4 +1,4 @@
-from TOOLS import factorial
+from tools import factorial
 
 div = 2, 3, 5, 7, 11, 13, 17
 

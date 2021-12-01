@@ -1,4 +1,4 @@
-from TOOLS import sieve_of_eratosthenes
+from tools import sieve_of_eratosthenes
 
 primes = sieve_of_eratosthenes(10000)
 primes = [p for p in primes if p > 1000]
