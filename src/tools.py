@@ -1,5 +1,28 @@
 import string
-from math import sqrt
+from math import sqrt, log
+
+
+def smallest_divisible_from_1_to_n(n: int) -> int:
+    '''
+    Return the smallest number divisible from 1 up to n.
+
+    :param n: int
+    '''
+    i, k = 0, 1
+    check = True
+    limit = int(sqrt(n))
+    a = [0 for _ in range(n)]
+    primes = sieve_of_eratosthenes(n ** 2)
+    while primes[i] <= n:
+        a[i] = 1
+        if check:
+            if primes[i] <= limit:
+                a[i] = int(log(n) // log(primes[i]))
+            else:
+                check = False
+        k = k * primes[i] ** a[i]
+        i += 1
+    return k
 
 
 def is_palindrome(n: int) -> bool:
