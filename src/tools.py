@@ -2,6 +2,29 @@ import string
 from math import sqrt
 
 
+def get_nth_fibonacci(nth: int) -> int:
+    '''
+    Return the nth fibonacci number.
+
+    :param nth: int
+    '''
+    if nth <= 0:
+        return 0
+    i = nth - 1
+    a = d = 1
+    b = c = aux1 = aux2 = 0
+    while i > 0:
+        if (i % 2 != 0):
+            aux1 = d * b + c * a
+            aux2 = d * (b + a) + c * b
+            a, b = aux1, aux2
+        aux1 = c ** 2 + d ** 2
+        aux2 = d * (2 * c + d)
+        c, d = aux1, aux2
+        i //= 2
+    return a + b
+
+
 def sum_divisible_by(n: int, limit: int) -> int:
     '''
     Return the sum of all integers divisible by n up to limit.
