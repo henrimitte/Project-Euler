@@ -2,6 +2,21 @@ import string
 from math import sqrt
 
 
+def sum_divisible_by(n: int, limit: int) -> int:
+    '''
+    Return the sum of all integers divisible by n up to limit.
+
+    :param n: int
+    :param limit: int
+
+    :target = n // limit
+
+    :return int n * (target * (target + 1)) // 2
+    '''
+    target = limit // n
+    return n * (target * (target + 1)) // 2
+
+
 def sieve_of_eratosthenes(limit=100) -> list:
     '''Return a list with all prime numbers below the limit.'''
     limit = abs(limit)
