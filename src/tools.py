@@ -2,6 +2,15 @@ import string
 from math import sqrt
 
 
+def is_palindrome(n: int) -> bool:
+    '''
+    Check if an integer is palindromic.
+
+    :param n: int
+    '''
+    return n == reverse_int(n)
+
+
 def reverse_int(n: int) -> int:
     '''
     Reverse the number and return it.
