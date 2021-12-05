@@ -2,6 +2,28 @@ import string
 from math import sqrt, log
 
 
+def sum_of_ints(n: int) -> int:
+    '''
+    Return the sum of all integers from 1 up to n.
+
+    :param n: int
+
+    :return int n * (n + 1) // 2
+    '''
+    return n * (n + 1) // 2
+
+
+def sum_of_squares(n: int) -> int:
+    '''
+    Return the sum of the squares of 1 up to n.
+
+    :param n: int
+
+    :return int (n * (n + 1) * (2 * n + 1)) // 6
+    '''
+    return (n * (n + 1) * (2 * n + 1)) // 6
+
+
 def smallest_divisible_from_1_to_n(n: int) -> int:
     '''
     Return the smallest number divisible from 1 up to n.
