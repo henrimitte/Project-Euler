@@ -2,6 +2,24 @@ import string
 from math import sqrt, log
 
 
+def get_pythagorean_triplet(m: int, n: int) -> tuple:
+    '''
+    Return a primitive pythagorean triplet for any integers m, n, with m > n.
+
+    :param m: int
+    :param n: int
+
+    :return tuple(a: int, b: int, c: int)
+    '''
+    if n <= m:
+        return ()
+    m_sqrd, n_sqrd = m ** 2, n ** 2
+    a = m_sqrd - n_sqrd
+    b = 2 * m * n
+    c = m_sqrd + n_sqrd
+    return a, b, c
+
+
 def sum_of_ints(n: int) -> int:
     '''
     Return the sum of all integers from 1 up to n.
