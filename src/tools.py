@@ -187,10 +187,15 @@ def is_one_through_n_pandigital(number_to_check: int, n: int) -> bool:
 
 
 def max_path_sum(triangle: list) -> int:
+    '''
+    Return the max sum of a path of a triangle.
+
+    :param triangle: list
+    '''
     triangle.reverse()
     for row_index, row in enumerate(triangle[1:]):
         for num_index, num in enumerate(row):
             left_sum = num + triangle[row_index][num_index]
             right_sum = num + triangle[row_index][num_index + 1]
             triangle[row_index + 1][num_index] = max(left_sum, right_sum)
-    return triangle[-1]
+    return triangle[-1][0]
