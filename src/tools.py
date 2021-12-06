@@ -147,10 +147,12 @@ def sieve_of_eratosthenes(limit=100) -> list:
 
 
 def factorial(num: int) -> int:
-    num = abs(num)
-    if num in (0, 1):
+    if 0 >= num <= 1:
         return 1
-    return num * factorial(num - 1)
+    m = 1
+    for c in range(2, num + 1):
+        m *= c
+    return m
 
 
 def fib(f1=0, f2=1, limit=100) -> list:
