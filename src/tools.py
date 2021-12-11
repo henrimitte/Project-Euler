@@ -2,6 +2,33 @@ import string
 from math import sqrt, log
 
 
+def least_common_multiple(a: int, b: int) -> int:
+    '''
+    Return the least common multiple of a and b for a > 0 and b > 0.
+
+    :param a: int
+    :param b: int
+
+    :return int
+    '''
+    return abs(a * b) // greatest_common_divisor(a, b)
+
+
+def greatest_common_divisor(a: int, b: int) -> int:
+    '''
+    Return the greatest common divisor of a and b for a > 0 and b > 0.
+
+    :param a: int
+    :param b: int
+
+    :return int
+    '''
+    while True:
+        a, b = b, a % b
+        if b == 0:
+            return a
+
+
 def get_pythagorean_triplet(m: int, n: int) -> tuple:
     '''
     Return a primitive pythagorean triplet for any integers m, n, with m > n.
