@@ -38,7 +38,7 @@ def get_pythagorean_triplet(m: int, n: int) -> tuple:
 
     :return tuple(a: int, b: int, c: int)
     '''
-    if n <= m:
+    if m <= n:
         return ()
     m_sqrd, n_sqrd = m ** 2, n ** 2
     a = m_sqrd - n_sqrd
