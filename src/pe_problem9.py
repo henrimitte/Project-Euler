@@ -8,12 +8,12 @@ def solve():
         triplet = get_pythagorean_triplet(m, n)
         s = sum(triplet)
         if s == 1000:
-            print(triplet, s)
             found = True
         elif s > 1000:
             n += 1
             m = n
         m += 1
+    print(triplet[0] * triplet[1] * triplet[2])
 
 
 if __name__ == '__main__':
