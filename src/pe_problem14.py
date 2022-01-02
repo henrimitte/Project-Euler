@@ -18,8 +18,9 @@ def solve():
     longest_chain = ans = 0
 
     for c in range(start, 1000000):
-        if _count_chain(c) > longest_chain:
-            longest_chain = _count_chain(c)
+        chain = _count_chain(c)
+        if chain > longest_chain:
+            longest_chain = chain
             ans = c
 
     print(ans)
