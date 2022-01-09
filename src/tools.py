@@ -2,6 +2,28 @@ import string
 from math import sqrt, log
 
 
+def get_nth_ordered_permutation(nth: int, size: int = None) -> int:
+    '''
+    Return the nth ordered permutation of size.
+
+    :param nth: int
+    :param size: int
+
+    :return int
+    '''
+    nums = list('0123456789')
+    nth -= 1
+    final = ''
+    size = 10 if size is None else size
+    for c in range(size - 1, -1, -1):
+        f = factorial(c)
+        d, m = divmod(nth, f)
+        final += nums.pop(int(d))
+        nth = m
+
+    return int(final)
+
+
 def least_common_multiple(a: int, b: int) -> int:
     '''
     Return the least common multiple of a and b for a > 0 and b > 0.
