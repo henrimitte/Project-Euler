@@ -233,7 +233,7 @@ def is_one_to_n_pandigital(n: str, size: int) -> bool:
 
     :return bool
     '''
-    return ''.join(sorted(n)) == string.digits[1:n + 1]
+    return ''.join(sorted(n)) == string.digits[1:size + 1]
 
 
 def max_path_sum(triangle: list) -> int:
