@@ -224,17 +224,16 @@ def simple_combination(n: int, p: int) -> float:
     return fact_n / (fact_p * fact_np)
 
 
-def is_one_through_n_pandigital(number_to_check: int, n: int) -> bool:
+def is_one_to_n_pandigital(n: str, size: int) -> bool:
     '''
     Check if a number is pandigital from 1 to n.
 
-    Args:
-        number_to_check: an integer with no more then 9 digits.
-        n: the size of the pangidital number, from 1 to 9
+    :param n: str
+    :param size: int
+
+    :return bool
     '''
-    number_to_check = ''.join(sorted(str(number_to_check)))
-    all_nums = string.digits[1:n + 1]  # Concatenated string with numbers 1..n
-    return number_to_check == all_nums
+    return ''.join(sorted(n)) == string.digits[1:n + 1]
 
 
 def max_path_sum(triangle: list) -> int:
