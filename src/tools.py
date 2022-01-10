@@ -2,6 +2,21 @@ import string
 from math import sqrt, log
 
 
+def sum_digits_of_n(n: int) -> int:
+    '''
+    Return the sum of all the digits on n.
+
+    :param n: int
+
+    :return int
+    '''
+    s = 0
+    while n > 0:
+        s += n % 10
+        n //= 10
+    return s
+
+
 def get_nth_ordered_permutation(nth: int, size: int = None) -> int:
     '''
     Return the nth ordered permutation of size.
