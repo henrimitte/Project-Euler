@@ -2,21 +2,37 @@ import string
 from math import sqrt, log
 
 
+def is_s_gonal(s: int, n: int) -> bool:
+    '''
+    Return if n is a s-gonal number.
+
+    :param s: int
+    :param n: int
+
+    :return bool
+    '''
+    s2, s4 = s - 2, s - 4
+    e = ((8 * s2 * n + s4 ** 2) ** 0.5 + s4) / (2 * s2)
+    return e == int(e)
+
+
 def get_nth_s_gonal(s: int, nth: int) -> int:
     '''
     Return the nth s-gonal number.
 
+    :param s: int
     :param nth: int
 
     :return int (s - 2) * nth * (nth - 1) // 2 + nth
     '''
     return (s - 2) * nth * (nth - 1) // 2 + nth
 
+
 def _is_pentagonal(n: int) -> bool:
     '''
     Return if n is a pentagonal number.
 
-    :param nth: int
+    :param n: int
 
     :return bool
     '''
