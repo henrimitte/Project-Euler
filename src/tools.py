@@ -2,6 +2,17 @@ import string
 from math import sqrt, log
 
 
+def get_nth_pentagonal(nth: int) -> int:
+    '''
+    Return the nth pentagonal number.
+
+    :param nth: int
+
+    :return int nth * (3 * nth - 1) // 2
+    '''
+    return nth * (3 * nth - 1) // 2
+
+
 def sum_digits_of_n(n: int) -> int:
     '''
     Return the sum of all the digits on n.
