@@ -263,10 +263,15 @@ def fib(f1=0, f2=1, limit=100) -> list:
 
 
 def simple_combination(n: int, p: int) -> float:
-    fact_n = factorial(n)
-    fact_p = factorial(p)
-    fact_np = factorial(n - p)
-    return fact_n / (fact_p * fact_np)
+    '''
+    Return the number of combinatios of n elements with only p selected.
+
+    :param n: int
+    :param p: int
+
+    :return factorial(n) // (factorial(p) * factorial(n - p))
+    '''
+    return factorial(n) // (factorial(p) * factorial(n - p))
 
 
 def is_one_to_n_pandigital(n: str, size: int) -> bool:
