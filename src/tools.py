@@ -28,29 +28,6 @@ def get_nth_s_gonal(s: int, nth: int) -> int:
     return (s - 2) * nth * (nth - 1) // 2 + nth
 
 
-def _is_pentagonal(n: int) -> bool:
-    '''
-    Return if n is a pentagonal number.
-
-    :param n: int
-
-    :return bool
-    '''
-    e = ((24 * n + 1) ** 0.5 + 1) / 6
-    return e == int(e)
-
-
-def get_nth_pentagonal(nth: int) -> int:
-    '''
-    Return the nth pentagonal number.
-
-    :param nth: int
-
-    :return int nth * (3 * nth - 1) // 2
-    '''
-    return nth * (3 * nth - 1) // 2
-
-
 def sum_digits_of_n(n: int) -> int:
     '''
     Return the sum of all the digits on n.
