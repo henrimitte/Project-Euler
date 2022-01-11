@@ -2,6 +2,18 @@ import string
 from math import sqrt, log
 
 
+def _is_pentagonal(n: int) -> bool:
+    '''
+    Return if n is a pentagonal number.
+
+    :param nth: int
+
+    :return bool
+    '''
+    e = ((24 * n + 1) ** 0.5 + 1) / 6
+    return e == int(e)
+
+
 def get_nth_pentagonal(nth: int) -> int:
     '''
     Return the nth pentagonal number.
