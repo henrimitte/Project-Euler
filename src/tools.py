@@ -1,5 +1,6 @@
 import string
 from math import sqrt, log
+from functools import cache
 
 
 def is_s_gonal(s: int, n: int) -> bool:
@@ -236,13 +237,16 @@ def sieve_of_eratosthenes(limit=100) -> list:
             return all_numbers
 
 
-def factorial(num: int) -> int:
-    if 0 >= num <= 1:
-        return 1
-    m = 1
-    for c in range(2, num + 1):
-        m *= c
-    return m
+@cache
+def factorial(n: int) -> int:
+    '''
+    Return the factorial of n (n!).
+
+    :param n: int
+
+    :return int
+    '''
+    return n * factorial(n - 1) if n else 1
 
 
 def fib(f1=0, f2=1, limit=100) -> list:
