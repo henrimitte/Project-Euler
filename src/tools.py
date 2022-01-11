@@ -2,6 +2,16 @@ import string
 from math import sqrt, log
 
 
+def get_nth_s_gonal(s: int, nth: int) -> int:
+    '''
+    Return the nth s-gonal number.
+
+    :param nth: int
+
+    :return int (s - 2) * nth * (nth - 1) // 2 + nth
+    '''
+    return (s - 2) * nth * (nth - 1) // 2 + nth
+
 def _is_pentagonal(n: int) -> bool:
     '''
     Return if n is a pentagonal number.
