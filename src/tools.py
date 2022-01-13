@@ -3,6 +3,43 @@ from math import sqrt, log
 from functools import cache
 
 
+def sieve_of_atkin(limit: int = 20) -> list[int]:
+    '''
+    Return a list with all the primes up to limit.
+
+    :param limit: int = 20
+
+    :return list[int]
+    '''
+    result = [2, 3, 5]
+    sieve = [False] * (limit + 1)
+    x = 1
+    while (x2 := x * x) < limit:
+        y = 1
+        while (y2 := y * y) < limit:
+            n = (4 * x2) + y2
+            if (n <= limit and (n % 12 == 1 or n % 12 == 5)):
+                sieve[n] ^= True
+
+            n = (3 * x2) + y2
+            if (n <= limit and (n % 12 == 7)):
+                sieve[n] ^= True
+
+            if x > y and (n := (3 * x2) - y2) <= limit and (n % 12 == 11):
+                sieve[n] ^= True
+            y += 1
+        x += 1
+
+    r = 5
+    while (r2 := r * r) < limit:
+        if sieve[r]:
+            for i in range(r2, limit, r2):
+                sieve[i] = False
+        r += 1
+
+    return result + [x for x in range(7, limit, 2) if sieve[x]]
+
+
 def is_s_gonal(s: int, n: int) -> bool:
     '''
     Return if n is a s-gonal number.
